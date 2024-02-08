@@ -9,7 +9,7 @@ body {
 
 body,
 .snake {
-	background-color: #414141;
+	background-color: #006400;
 }
 
 #game-board {
@@ -20,22 +20,47 @@ body,
 	margin: 5px;
 }
 
+@media screen and (max-width: 400px) {
+	#game-board {
+		grid-template-columns: repeat(20, 5px);
+		grid-template-rows: repeat(20, 5px);
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#game-board {
+		grid-template-columns: repeat(20, 30px);
+		grid-template-rows: repeat(20, 30px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#game-board {
+		grid-template-columns: repeat(20, 15px);
+		grid-template-rows: repeat(20, 15px);
+	}
+	#logo {
+		height: 150px;
+		object-fit: contain;
+	}
+}
+
 .game-border-1 {
-	border: #595f43 solid 10px;
+	border: #cd853f solid 10px;
 	border-radius: 30px;
-	box-shadow: inset 0 0 0 10px #595f43;
+	box-shadow: inset 0 0 0 10px #cd853f;
 }
 
 .game-border-2 {
-	border: #abb78a solid 8px;
+	border: #8b4513 solid 8px;
 	border-radius: 26px;
-	box-shadow: inset 0 0 0 10px #abb78a;
+	box-shadow: inset 0 0 0 10px #8b4513;
 }
 
 .game-border-3 {
-	border: #8b966c solid 30px;
+	border: #556b2f solid 30px;
 	border-radius: 20px;
-	box-shadow: inset 0 0 0 5px #8b966c;
+	box-shadow: inset 0 0 0 5px #556b2f;
 }
 
 #instruction-text {
@@ -66,21 +91,24 @@ body,
 }
 
 #highScore {
-  color: #d8ddca;
-  display: none;
+	color: #d8ddca;
+	display: none;
 }
 
-.game-border-3, #logo {
-  background-color: #c4cfa3;
+.game-border-3,
+#logo {
+	background-color: #c4cfa3;
 }
 
 .snake {
-  border: #5a5a5a 1px dotted;
+	border: #5a5a5a 1px dotted;
 }
 .food {
-  background-color: #dedede;
-  border: #999 5px solid;
+	background-color: #dedede;
+	border: #999 5px solid;
 }
 #logo {
-  position: absolute;
+	position: absolute;
+	width: 250px;
+	background: transparent;
 }
