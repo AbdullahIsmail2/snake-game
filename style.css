@@ -72,6 +72,13 @@ body,
 	text-transform: capitalize;
 	padding: 30px;
 	margin: 0;
+	font-size: 45px;
+}
+
+@media screen and (max-width: 1000px) {
+	#instruction-text {
+		font-size: 30px;
+	}
 }
 
 .scores {

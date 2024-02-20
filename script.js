@@ -23,6 +23,15 @@ function draw() {
 	updateScore();
 }
 
+function gameText() {
+	if (window.innerWidth < 1000) {
+		instructionText.innerHTML = 'You need a keyboard to play this game'
+	} else {
+		instructionText.innerHTML = 'Press spacebar to play!'
+	}
+}
+
+window.addEventListener('resize', gameText)
 // Draw snake
 function drawSnake() {
 	snake.forEach((segment) => {
